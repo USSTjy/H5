@@ -1,0 +1,242 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+.all {
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+}
+.music {
+  position: absolute;
+  cursor: pointer;
+  z-index: 200;
+  width: 8vw;
+  height: 8vw;
+  top: 5vh;
+  right: 10vw;
+  animation: rotation 30s linear infinite;
+  -moz-animation: rotation 30s linear infinite;
+  -webkit-animation: rotation 30s linear infinite;
+  -o-animation: rotation 30s linear infinite;
+}
+.bgm-btn.rotate {
+  -webkit-animation: rotateImg 1.5s linear infinite;
+}
+
+@keyframes rotateImg {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes rotateImg {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+.bgm-btn {
+  right: 0;
+  top: 0;
+  position: absolute;
+  z-index: 200;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  background-image: url(bgm.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.bottom_bar {
+  position: absolute;
+  width: 100%;
+  height: 10px;
+  bottom: 0px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 100;
+}
+.bar_len {
+  display: block;
+  height: 100%;
+  width: 75%;
+  background-color: #08a1ef;
+  transition: width 0.8s cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  border-radius: 2px;
+}
+.bar_progress_tip {
+  display: inline-block;
+  position: absolute;
+  right: 10px;
+  top: -30px;
+  font-style: normal;
+  font-weight: bolder;
+  color: #fff;
+  font-size: 75%;
+  padding-left: 5px;
+  line-height: 12px;
+}
+
+.next_page {
+  position: absolute;
+  cursor: pointer;
+  bottom: 10px;
+  z-index: 150;
+  height: 5vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.pre-wrap-bottom {
+  width: 5vw;
+  height: 100%;
+  position: relative;
+  -webkit-animation: start 1.5s infinite ease-in-out;
+  animation: start 1.5s infinite ease-in-out;
+}
+.pre-box1,
+.pre-box2 {
+  width: 5vw;
+  height: 100%;
+  position: absolute;
+  top: -5px;
+  overflow: hidden;
+}
+.pre-box2 {
+  left: 3vw;
+}
+
+.pre1,
+.pre2 {
+  background-color: #fff;
+  width: 5vw;
+  height: 1vh;
+  border-radius: 2px;
+  position: absolute;
+  box-shadow: 1px -1px 1px #646464;
+  top: 5px;
+}
+.pre1 {
+  transform: rotate(130deg);
+  -webkit-transform: rotate(130deg);
+}
+
+.pre2 {
+  -webkit-transform: rotate(50deg);
+  transform: rotate(50deg);
+}
+.all .fp-tableCell {
+  vertical-align: top;
+}
+.wrapper {
+  font-size: 55%;
+  text-align: left;
+}
+.wrapper p {
+  margin: 1vh 0;
+}
+.section1 img {
+  margin-top: 15%;
+}
+
+.section2_content {
+  position: absolute;
+  width: 100%;
+  padding: 5px;
+  top: 10%;
+  left: 10%;
+  color: rgb(214, 123, 3);
+  font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.section3 .top_right {
+  position: absolute;
+  width: 35%;
+  height: 10%;
+  right: 0px;
+  z-index: 201;
+  top: 0px;
+}
+
+.section3_content {
+  position: absolute;
+  width: 100%;
+  margin: 0 10%;
+  top: 10%;
+  color: rgb(214, 123, 3);
+  font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+.section3_content .wrapper p:nth-child(4),
+.section3_content .wrapper p:nth-child(6) {
+  margin-top: 2vh;
+}
+.section4_content {
+  position: absolute;
+  width: 100%;
+  top: 15%;
+}
+.section_title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 60%;
+}
+.title1 {
+  border: 2px solid rgb(214, 123, 3);
+  color: rgb(214, 123, 3);
+  padding: 5px 5px;
+  font-weight: bold;
+}
+.title2 {
+  background: orange;
+  padding: 5px 5px;
+  color: #f1dede;
+  font-weight: bold;
+}
+
+.section4 .wrapper {
+  text-align: center;
+  color: rgb(214, 123, 3);
+  font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+.section4 .wrapper p:nth-child(10),
+.section4 .wrapper p:nth-child(11) {
+  color: rgb(170, 56, 3);
+}
+.section4 .wrapper p:nth-child(8) {
+  margin-top: 4vh;
+}
+.section4 .wrapper p:nth-child(10) {
+  margin-top: 6vh;
+}
+
+#ring {
+  text-align: center;
+  opacity: 0;
+}
+#hand {
+  opacity: 0;
+  text-align: right;
+  margin-top: -8vh;
+}
